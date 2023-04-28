@@ -9,3 +9,23 @@
 /* Atributo largo = lenght (tienen atributos) */
 /* Métodos (funciones) = representan acciones o procesos */
 
+/* Métodos de arreglos */
+/* Push: agrega un elemento a la última posición del arreglo */
+/* Unshift: agrega un elemento a la primera posición del arreglo */
+/* Shift: elminia un elemento a la primera posición del arreglo */
+/* Pop: elminia un elemento a la última posición del arreglo */
+/* Splice: elimina un elemento o varios desde un elemento indicado */
+
+/* Endpoint: https://pokeapi.co/api/v2/pokemon */
+
+function consumoDeAPI(){
+    $.ajax({
+        type: "get",
+        url: "https://pokeapi.co/api/v2/pokemon",
+        success: function (response) {
+            console.log(response);
+        }
+    });
+}
+
+consumoDeAPI();
