@@ -40,3 +40,22 @@ function filtrarPorBaseExperiencia(arregloPokemones){
 
 var arregloPokemones = consumoDeAPI();
 filtrarPorBaseExperiencia(arregloPokemones);
+
+/* Map */
+function aumentarBaseExperiencia(arregloPokemones){
+    var arregloNuevo = arregloPokemones.map(function(pokemon){
+        return pokemon.base_experience * 1.2;
+    });
+    console.log(arregloNuevo);
+}
+
+function aumentarBaseExperienciaNuevoAtributo(arregloPokemones){
+    arregloPokemones.map(function(pokemon){
+        return pokemon.base_experience_aumentado = pokemon.base_experience * 1.2;
+    });
+    return arregloPokemones;
+}
+
+aumentarBaseExperiencia(arregloPokemones);
+var arregloConNuevoAtributo = aumentarBaseExperienciaNuevoAtributo(arregloPokemones);
+console.log(arregloConNuevoAtributo);
