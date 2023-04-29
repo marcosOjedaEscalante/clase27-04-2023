@@ -30,6 +30,13 @@ function consumoDeAPIPorPokemon(arregloPokemonURL){
     return arregloPokemonesInfoCompleta;
 }
 
-console.log(consumoDeAPI());
-
 /* Filter */
+function filtrarPorBaseExperiencia(arregloPokemones){
+    var arregloFiltrado = arregloPokemones.filter(function(pokemon) {
+        return pokemon.base_experience > 100;
+    });
+    console.log(arregloFiltrado);
+}
+
+var arregloPokemones = consumoDeAPI();
+filtrarPorBaseExperiencia(arregloPokemones);
